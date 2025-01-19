@@ -14,6 +14,10 @@ class ViewController:
     @IBOutlet var cardView: UIView!
     @IBOutlet var blurView: UIVisualEffectView!
     
+    @IBOutlet var HandBookCollectionView: UICollectionView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,8 +38,34 @@ class ViewController:
 /// در بخش main تنظیمات
 /// ویوی خودت رو کاستوم کنی
         
+        
+        
+        
+        HandBookCollectionView.delegate = self
+        HandBookCollectionView.dataSource = self
     }
 
+}
 
+extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        //  تعداد سلول ها
+        return 3
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // محتوای هر سلول
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCell", for: indexPath) as! HandBookUlCollectionViewCell
+        cell.Titel.text = "Sothesom HandBook"
+        cell.SubTitel.text = "20 HOURS - 30 SECTIONS"
+        cell.SubTitle2.text = "Learn about all the basics of SwiftUI"
+        cell.gradient.colors = [UIColor.red.cgColor, UIColor.systemPink.cgColor]
+        cell.logo.image = UIImage(named: "Logo React")
+        cell.baner.image = UIImage(named: "Illustration 2")
+        
+        return cell
+    }
+    
+    
 }
 
