@@ -10,9 +10,22 @@
 		9BB1E0462D3BAC19002B72A6 /* UIKit-ProApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-ProApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9B48173D2D4103DF00FEBEFE /* Exceptions for "UIKit-ProApp" folder in "UIKit-ProApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 9BB1E0452D3BAC19002B72A6 /* UIKit-ProApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		9BB1E0482D3BAC19002B72A6 /* UIKit-ProApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				9B48173D2D4103DF00FEBEFE /* Exceptions for "UIKit-ProApp" folder in "UIKit-ProApp" target */,
+			);
 			path = "UIKit-ProApp";
 			sourceTree = "<group>";
 		};
