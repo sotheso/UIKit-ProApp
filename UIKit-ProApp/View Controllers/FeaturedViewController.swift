@@ -16,6 +16,7 @@ class FeaturedViewController: UIViewController {
     @IBOutlet var handbooksCollectionView: UICollectionView!
     @IBOutlet var tableViewHeight: NSLayoutConstraint!
     
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var coursesTableView: UITableView!
     
     private var tokens: Set<AnyCancellable> = []
@@ -37,6 +38,16 @@ class FeaturedViewController: UIViewController {
                 self.tableViewHeight.constant = newContentSize.height
             }
             .store(in: &tokens)
+        
+        scrollView.delegate = self
+    }
+// بر اساس شناسه اون کورس رو باز کنه
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let detailsVS = segue.destination as? CoursesViewController, let course = sender as? Course  {
+            detailsVS.coures = course
+// برای پیام به بکند
+//            print("Preparation for Course VC Successful")
+        }
     }
 
 }
@@ -100,5 +111,32 @@ extension FeaturedViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+// یک لحظه سلکت کردن مثلا به رنگ خاکستری و بعد از حالت سلکت خارج شدن
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedCourse = courses[indexPath.section]
+// بر اساس شناسه اون کورس رو باز کنه
+        performSegue(withIdentifier: "presentCourse", sender: selectedCourse)
+    }
 }
 
+// برای اسکرول کردن
+extension FeaturedViewController : UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+// وقتی اسکرول میکنی اون بالا تیتر به سر تیتر های خودش تغییر کنه
+        let contentHeight = scrollView.contentSize.height
+        // موقعیت اسکرول ما برای فهمیدن اینکه کجا هستیم
+        let lastScrollYPos = scrollView.contentOffset.y
+        let percentage = lastScrollYPos / contentHeight
+        // حالا اونجایی که هست این نویگیشن تیتر باشه
+        if percentage >= 0.15 {
+            self.title = "Featured"
+        } else if percentage >= 0.33 {
+            self.title = "Handbooks"
+        } else {
+            self.title = "Courses"
+        }
+    }
+    
+}
