@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background01" translatesAutoresizingMaskIntoConstraints="NO" id="JT3-8n-9oO">
-                                        <rect key="frame" x="0.0" y="516.33333333333337" width="393" height="464.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="477" width="393" height="464.66666666666674"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abk-Vq-UfM" customClass="CustomView" customModule="UIKit_ProApp" customModuleProvider="target">
                                         <rect key="frame" x="16" y="20" width="361" height="373"/>
@@ -309,7 +309,7 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="etj-Hj-jiA">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="350" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etj-Hj-jiA" userLabel="Courses Table View">
                                         <rect key="frame" x="16" y="793.66666666666663" width="361" height="399.99999999999989"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -317,7 +317,7 @@
                                             <constraint firstAttribute="height" constant="400" id="ncO-fR-1If"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoursesTabelCell" rowHeight="350" id="Kcn-R5-CZN" customClass="CoursesTableViewCell" customModule="UIKit_ProApp" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CoursesTableCell" rowHeight="350" id="Kcn-R5-CZN" userLabel="Courses Table Cell" customClass="CoursesTableViewCell" customModule="UIKit_ProApp" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="361" height="350"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kcn-R5-CZN" id="Ntf-Ff-FtV">
@@ -401,6 +401,14 @@
                                                         <constraint firstAttribute="trailingMargin" secondItem="p2r-k6-fJK" secondAttribute="trailing" id="vpG-cc-qX9"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="courseBanner" destination="H6i-Cg-zNe" id="waq-I0-Vy1"/>
+                                                    <outlet property="courseLogo" destination="bIT-nY-FdR" id="Q67-fW-Nle"/>
+                                                    <outlet property="coursesBackgound" destination="p2r-k6-fJK" id="Sh5-nq-ICm"/>
+                                                    <outlet property="desciptionLabel" destination="EwC-ht-cmA" id="GwG-n2-NI2"/>
+                                                    <outlet property="subtitleLabel" destination="B8x-nu-ng5" id="yJJ-R7-Txg"/>
+                                                    <outlet property="titleLabel" destination="3OX-Fv-7kr" id="XPa-Vq-xjT"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -450,7 +458,9 @@
                     <connections>
                         <outlet property="blurView" destination="Riu-sl-jiM" id="wbh-2h-NgH"/>
                         <outlet property="cardView" destination="abk-Vq-UfM" id="FKg-N8-HZV"/>
+                        <outlet property="coursesTableView" destination="etj-Hj-jiA" id="Qb2-8G-Kxc"/>
                         <outlet property="handbooksCollectionView" destination="E1n-s3-s5k" id="PFN-fZ-tTH"/>
+                        <outlet property="tableViewHeight" destination="ncO-fR-1If" id="5ua-hM-d3o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

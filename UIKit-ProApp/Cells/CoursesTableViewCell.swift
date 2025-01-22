@@ -8,6 +8,13 @@
 import UIKit
 
 class CoursesTableViewCell: UITableViewCell {
+    @IBOutlet var coursesBackgound: UIImageView!
+    @IBOutlet var desciptionLabel: UILabel!
+    @IBOutlet var subtitleLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var courseBanner: UIImageView!
+    @IBOutlet var courseLogo: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -18,5 +25,9 @@ class CoursesTableViewCell: UITableViewCell {
         layer.masksToBounds = false
         
         layer.cornerRadius = 30
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
 }
