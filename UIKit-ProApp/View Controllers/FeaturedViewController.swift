@@ -44,7 +44,7 @@ class FeaturedViewController: UIViewController {
 // بر اساس شناسه اون کورس رو باز کنه
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let detailsVS = segue.destination as? CoursesViewController, let course = sender as? Course  {
-            detailsVS.coures = course
+            detailsVS.course = course
 // برای پیام به بکند
 //            print("Preparation for Course VC Successful")
         }

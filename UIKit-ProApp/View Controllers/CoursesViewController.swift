@@ -6,16 +6,87 @@
 //
 
 import UIKit
+import Combine
 
 class CoursesViewController: UIViewController {
 
 // متغییر برای دوره ای که سلکت شده
-    var coures: Course?
+    var course: Course?
+    
+    
+    @IBOutlet var sectionTableView: UITableView!
+    @IBOutlet var tableViewHeight: NSLayoutConstraint!
+    
+    @IBOutlet var bannerImage: UIImageView!
+    @IBOutlet var backgroudImage: UIImageView!
+    @IBOutlet var titleLable: UILabel!
+    @IBOutlet var authorLable: UILabel!
+    @IBOutlet var descripcionLable: UILabel!
+    @IBOutlet var subtitleLable: UILabel!
+//
+    private var tokens: Set<AnyCancellable> = []
+     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("this is \(coures?.courseTitle) selected")
 
+        
+        sectionTableView.delegate = self
+        sectionTableView.dataSource = self
+
+// Combine
+            // برای وقتی که کاربر اسکرول میکنه صفحه متناسب با اون تغییر کنه
+        sectionTableView.publisher(for: \.contentSize)
+            .sink { newContentSize in
+                self.tableViewHeight.constant = newContentSize.height
+            }
+            .store(in: &tokens)
+                
+        sectionTableView.rowHeight = UITableView.automaticDimension
+        sectionTableView.estimatedRowHeight = UITableView.automaticDimension
+        
+        
+        // Set data for the preview card // داده های پیشفرض
+//        self.iconImageView.image = course?.courseIcon
+        self.bannerImage.image = course?.courseBanner
+        self.backgroudImage.image = course?.courseBackground
+        self.titleLable.text = course?.courseTitle
+        self.subtitleLable.text = course?.courseSubtitle
+        self.descripcionLable.text = course?.couresDescription
+        self.authorLable.text = "Sotheom by \(course?.courseAuthor?.formatted(.list(type: .and, width: .standard)) ?? "Sothesom Karimi")"
+        
     }
 
+    
+    @IBAction func goBack(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+}
+
+extension CoursesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.course?.sections?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SectionCell", for: indexPath) as! SectionTableViewCell
+        if let selectedCourse = course {
+            let selectedSection = selectedCourse.sections![indexPath.row]
+            
+            cell.courseLogo.image = selectedSection.sectionIcon
+            cell.desciptionLabel.text = selectedSection.sectionDescription
+            cell.subtitleLabel.text = selectedSection.sectionSubtitle
+            cell.titleLabel.text = selectedSection.sectionTitle
+        }
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    // ارتفاع هر سطح بر اسا آنچه کهع در استوری برد داریم تنظیم میشود
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
 }
