@@ -23,7 +23,10 @@ class CoursesViewController: UIViewController {
     @IBOutlet var authorLable: UILabel!
     @IBOutlet var descripcionLable: UILabel!
     @IBOutlet var subtitleLable: UILabel!
-//
+    
+    @IBOutlet var iconImageView: CustomImageView!
+    
+    @IBOutlet var menuButton: UIButton!
     private var tokens: Set<AnyCancellable> = []
      
     override func viewDidLoad() {
@@ -41,12 +44,12 @@ class CoursesViewController: UIViewController {
             }
             .store(in: &tokens)
                 
-        sectionTableView.rowHeight = UITableView.automaticDimension
-        sectionTableView.estimatedRowHeight = UITableView.automaticDimension
+//        sectionTableView.rowHeight = UITableView.automaticDimension
+//        sectionTableView.estimatedRowHeight = UITableView.automaticDimension
         
         
         // Set data for the preview card // داده های پیشفرض
-//        self.iconImageView.image = course?.courseIcon
+        self.iconImageView.image = course?.courseIcon
         self.bannerImage.image = course?.courseBanner
         self.backgroudImage.image = course?.courseBackground
         self.titleLable.text = course?.courseTitle
@@ -54,6 +57,29 @@ class CoursesViewController: UIViewController {
         self.descripcionLable.text = course?.couresDescription
         self.authorLable.text = "Sotheom by \(course?.courseAuthor?.formatted(.list(type: .and, width: .standard)) ?? "Sothesom Karimi")"
         
+        
+// منوی دکمه بالای صفحه
+        let menu = UIMenu(
+            title: "Course Options",
+            options: .displayInline,
+            children: [
+                UIAction(title: "Shere", image: UIImage(systemName: "square.and.arrow.up"), handler: { _ in
+                    // دکمه ی شیر
+                }),
+                UIAction(title: "Take Test", image: UIImage(systemName: "highlighter"), handler: { _ in
+
+                }),
+                UIAction(title: "Download", image: UIImage(systemName: "square.and.arrow.down"), handler: { _ in
+
+                }),
+                UIAction(title: "Forums", image: UIImage(systemName: "chevron.left.forwardslash.chevron.right"), handler: { _ in
+
+                }),
+                
+            ]
+        )
+        menuButton.showsMenuAsPrimaryAction = true
+        menuButton.menu = menu
     }
 
     
@@ -86,7 +112,5 @@ extension CoursesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     // ارتفاع هر سطح بر اسا آنچه کهع در استوری برد داریم تنظیم میشود
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
+//
 }
