@@ -14,6 +14,7 @@ class FeaturedViewController: UIViewController {
     @IBOutlet var cardView: UIView!
     @IBOutlet var blurView: UIVisualEffectView!
     @IBOutlet var handbooksCollectionView: UICollectionView!
+    // نمای ارتفاعی قابل تنظیم
     @IBOutlet var tableViewHeight: NSLayoutConstraint!
     
     @IBOutlet var scrollView: UIScrollView!
