@@ -17,6 +17,17 @@ class SectionsCollectionViewCell: UICollectionViewCell {
     override public func layoutSubviews() {
         super.layoutSubviews()
         super.layoutIfNeeded()
+
+//Accessibility
+// تعیین فونت و اندازه لیبل برای اونایی که از تنظیمات گوشی قراره تاثیر بگیره
+        titleLabel.adjustsFontForContentSizeCategory = true
+        titleLabel.font = UIFont.preferredFont(for: .body, weight: .bold)
+        titleLabel.maximumContentSizeCategory = .extraExtraLarge
+                        
+        subtitleLabel.adjustsFontForContentSizeCategory = true
+        subtitleLabel.font = UIFont.preferredFont(for: .caption1, weight: .regular)
+        subtitleLabel.maximumContentSizeCategory = .extraLarge
+
     }
     
     override public func awakeFromNib() {

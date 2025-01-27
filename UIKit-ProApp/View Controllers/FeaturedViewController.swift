@@ -22,6 +22,13 @@ class FeaturedViewController: UIViewController {
     
     private var tokens: Set<AnyCancellable> = []
     
+    // تعیین فونت و اندازه لیبل
+    @IBOutlet var featuerdTitleLable: UILabel!
+    @IBOutlet var featuerdSubtitleLable: UILabel!
+    @IBOutlet var featuerdDeseLable: UILabel!
+    @IBOutlet var handbooksLable: UILabel!
+    @IBOutlet var RecentLable: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +48,29 @@ class FeaturedViewController: UIViewController {
             .store(in: &tokens)
         
         scrollView.delegate = self
+    
+// Accessibility
+        // تعیین فونت و اندازه لیبل برای اونایی که از تنظیمات گوشی قراره تاثیر بگیره
+        featuerdDeseLable.adjustsFontForContentSizeCategory = true
+        featuerdDeseLable.font = UIFont.preferredFont(for: .footnote, weight: .semibold)
+        featuerdDeseLable.maximumContentSizeCategory = .accessibilityMedium
+        
+        featuerdTitleLable.adjustsFontForContentSizeCategory = true
+        featuerdTitleLable.font = UIFont.preferredFont(for: .title1, weight: .bold)
+        featuerdTitleLable.maximumContentSizeCategory = .accessibilityExtraLarge
+        
+        featuerdSubtitleLable.adjustsFontForContentSizeCategory = true
+        featuerdSubtitleLable.font = UIFont.preferredFont(for: .footnote, weight: .semibold)
+        featuerdSubtitleLable.maximumContentSizeCategory = .accessibilityMedium
+        
+        handbooksLable.adjustsFontSizeToFitWidth = true
+        handbooksLable.font = UIFont.preferredFont(for: .footnote, weight: .semibold)
+        handbooksLable.maximumContentSizeCategory = .accessibilityMedium
+        
+        RecentLable.adjustsFontSizeToFitWidth = true
+        RecentLable.font = UIFont.preferredFont(for: .footnote, weight: .semibold)
+        RecentLable.maximumContentSizeCategory = .accessibilityMedium
+
     }
 // بر اساس شناسه اون کورس رو باز کنه
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

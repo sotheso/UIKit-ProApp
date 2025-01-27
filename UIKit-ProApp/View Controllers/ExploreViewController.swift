@@ -18,8 +18,12 @@ class ExploreViewController: UIViewController {
     private var tokens: Set<AnyCancellable> = []
     
     @IBOutlet var papulerCollerctionView: UICollectionView!
-    
     @IBOutlet var scrollView: UIScrollView!
+    
+    @IBOutlet var titleLable: UILabel!
+    @IBOutlet var topicLable: UILabel!
+    @IBOutlet var populerLable: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -44,6 +48,20 @@ class ExploreViewController: UIViewController {
         
         scrollView.delegate = self
         
+        
+// Accessibility
+                // تعیین فونت و اندازه لیبل برای اونایی که از تنظیمات گوشی قراره تاثیر بگیره
+        titleLable.adjustsFontForContentSizeCategory = true
+        titleLable.font = UIFont.preferredFont(for: .title2, weight: .semibold)
+        titleLable.maximumContentSizeCategory = .accessibilityMedium
+                
+        topicLable.adjustsFontForContentSizeCategory = true
+        topicLable.font = UIFont.preferredFont(for: .footnote, weight: .semibold)
+        topicLable.maximumContentSizeCategory = .accessibilityExtraLarge
+                
+        populerLable.adjustsFontForContentSizeCategory = true
+        populerLable.font = UIFont.preferredFont(for: .footnote, weight: .semibold)
+        populerLable.maximumContentSizeCategory = .accessibilityMedium
     }
 }
 

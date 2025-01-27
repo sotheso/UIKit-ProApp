@@ -43,6 +43,20 @@ class HandbookCollectionView: UICollectionViewCell {
         overlay.layer.insertSublayer(gradient, at: 0)
         overlay.layer.cornerCurve = .continuous
         overlay.layer.cornerRadius = 30
+        
+// Accessibility
+    // تعیین فونت و اندازه لیبل برای اونایی که از تنظیمات گوشی قراره تاثیر بگیره
+        titleLabel.adjustsFontForContentSizeCategory = true
+        titleLabel.font = UIFont.preferredFont(for: .headline, weight: .semibold)
+        titleLabel.maximumContentSizeCategory = .extraExtraLarge
+        
+        subtitleLabel.adjustsFontForContentSizeCategory = true
+        subtitleLabel.font = UIFont.preferredFont(for: .caption2, weight: .regular)
+        subtitleLabel.maximumContentSizeCategory = .extraLarge
+        
+        discriptionLabel.adjustsFontForContentSizeCategory = true
+        discriptionLabel.font = UIFont.preferredFont(for: .caption2, weight: .regular)
+        discriptionLabel.maximumContentSizeCategory = .extraLarge 
     }
     
 // آمادگی برای استفاده مجدد
