@@ -17,6 +17,9 @@ class ExploreViewController: UIViewController {
     // اندازه جدول به اندازه محتوا
     private var tokens: Set<AnyCancellable> = []
     
+    @IBOutlet var papulerCollerctionView: UICollectionView!
+    
+    @IBOutlet var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +31,9 @@ class ExploreViewController: UIViewController {
         topicTableView.dataSource = self
         topicTableView.layer.masksToBounds = false
         
+        papulerCollerctionView.delegate = self
+        papulerCollerctionView.dataSource = self
+        papulerCollerctionView.layer.masksToBounds = false
 // Combine
 // برای وقتی که کاربر اسکرول میکنه صفحه متناسب با اون تغییر کنه
         topicTableView.publisher(for: \.contentSize)
@@ -35,24 +41,48 @@ class ExploreViewController: UIViewController {
                 self.tableViewHeight.constant = newContentSize.height
             }
             .store(in: &tokens)
+        
+        scrollView.delegate = self
+        
     }
 }
 
+// این حرکت ایف برای اینکه دوبار تابع ننویسیم
 extension ExploreViewController: UICollectionViewDataSource , UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return sections.count
+        if collectionView == sectionCollectionView {
+            return sections.count
+        } else {
+            return handbooks.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionsCollectionViewCell
-        let section = sections[indexPath.item]
         
-        cell.titleLabel.text = section.sectionTitle
-        cell.logo.image = section.sectionIcon
-        cell.banner.image = section.sectionBanner
-        cell.subtitleLabel.text = section.sectionSubtitle
-        
-        return cell
+        if collectionView == sectionCollectionView {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionsCollectionViewCell
+            let section = sections[indexPath.item]
+            
+            cell.titleLabel.text = section.sectionTitle
+            cell.logo.image = section.sectionIcon
+            cell.banner.image = section.sectionBanner
+            cell.subtitleLabel.text = section.sectionSubtitle
+            
+            return cell
+            
+        } else {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCell", for: indexPath) as! HandbookCollectionView
+            let handbook = handbooks[indexPath.item]
+            
+            cell.titleLabel.text = handbook.courseTitle
+            cell.subtitleLabel.text = handbook.courseSubtitle
+            cell.discriptionLabel.text = handbook.couresDescription
+            cell.gradient.colors = handbook.courseGradinet
+            cell.logo.image = handbook.courseIcon
+            cell.banner.image = handbook.courseBanner
+            
+            return cell
+        }
     }
 }
 
