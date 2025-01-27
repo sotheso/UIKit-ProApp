@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9B98026C2D47C59A00571325 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9B98026B2D47C59A00571325 /* FirebaseAnalytics */; };
+		9B98026E2D47C59A00571325 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9B98026D2D47C59A00571325 /* FirebaseAuth */; };
+		9B9802702D47C59A00571325 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 9B98026F2D47C59A00571325 /* FirebaseFirestore */; };
+		9B9802722D47C59A00571325 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 9B9802712D47C59A00571325 /* FirebaseInAppMessaging-Beta */; };
+		9B9802742D47C59A00571325 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 9B9802732D47C59A00571325 /* FirebaseMessaging */; };
+		9B9802762D47C59A00571325 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 9B9802752D47C59A00571325 /* FirebasePerformance */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		9BB1E0462D3BAC19002B72A6 /* UIKit-ProApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIKit-ProApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +45,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B98026C2D47C59A00571325 /* FirebaseAnalytics in Frameworks */,
+				9B98026E2D47C59A00571325 /* FirebaseAuth in Frameworks */,
+				9B9802762D47C59A00571325 /* FirebasePerformance in Frameworks */,
+				9B9802742D47C59A00571325 /* FirebaseMessaging in Frameworks */,
+				9B9802702D47C59A00571325 /* FirebaseFirestore in Frameworks */,
+				9B9802722D47C59A00571325 /* FirebaseInAppMessaging-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +93,12 @@
 			);
 			name = "UIKit-ProApp";
 			packageProductDependencies = (
+				9B98026B2D47C59A00571325 /* FirebaseAnalytics */,
+				9B98026D2D47C59A00571325 /* FirebaseAuth */,
+				9B98026F2D47C59A00571325 /* FirebaseFirestore */,
+				9B9802712D47C59A00571325 /* FirebaseInAppMessaging-Beta */,
+				9B9802732D47C59A00571325 /* FirebaseMessaging */,
+				9B9802752D47C59A00571325 /* FirebasePerformance */,
 			);
 			productName = "UIKit-ProApp";
 			productReference = 9BB1E0462D3BAC19002B72A6 /* UIKit-ProApp.app */;
@@ -107,6 +128,9 @@
 			);
 			mainGroup = 9BB1E03D2D3BAC19002B72A6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9B98026A2D47C59A00571325 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9BB1E0472D3BAC19002B72A6 /* Products */;
 			projectDirPath = "";
@@ -157,7 +181,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sothesom.UIKit-ProApp";
+				PRODUCT_BUNDLE_IDENTIFIER = sothesom.UIKit15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -184,7 +208,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sothesom.UIKit-ProApp";
+				PRODUCT_BUNDLE_IDENTIFIER = sothesom.UIKit15;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -333,6 +357,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9B98026A2D47C59A00571325 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9B98026B2D47C59A00571325 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B98026A2D47C59A00571325 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		9B98026D2D47C59A00571325 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B98026A2D47C59A00571325 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		9B98026F2D47C59A00571325 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B98026A2D47C59A00571325 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		9B9802712D47C59A00571325 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B98026A2D47C59A00571325 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		9B9802732D47C59A00571325 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B98026A2D47C59A00571325 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		9B9802752D47C59A00571325 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9B98026A2D47C59A00571325 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9BB1E03E2D3BAC19002B72A6 /* Project object */;
 }
