@@ -24,6 +24,19 @@ class LoginViewController: UIViewController {
     var passwordKHALI = true
     private var tokens: Set<AnyCancellable> = []
     
+    enum LoginStatus {
+        case signUp
+        case signIn
+    }
+    var loginStatus : LoginStatus = .signUp {
+        didSet {
+            self.titleLabel.text = (loginStatus == .signUp) ? "Sign up" : "Sign in"
+            self.primaryBtn.setTitle((loginStatus == .signUp) ? "Creat accout" : "Sign in" , for: .normal)
+            self.accessoryBtn.setTitle((loginStatus == .signUp) ? "Don't have a account" : "Already have an account?  ", for: .normal)
+            self.passwordTextfield.textContentType = (loginStatus == .signUp) ? .newPassword : .password
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 // انیمیشن برنامه
@@ -62,22 +75,38 @@ class LoginViewController: UIViewController {
             self.present(alert, animated: true, completion: nil)
         } else {
             // حال اگه پر بود
-            Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) {
-                authResult, error in
-                guard error == nil else {
-                    print(error!.localizedDescription)
-                    return
+            // بسته به اینکه عضو داریم میشیم یا داریم ثبت نام میکنیم
+            if loginStatus == .signUp {
+                Auth.auth().createUser(withEmail: emailTextfield.text!, password: passwordTextfield.text!) {
+                    authResult, error in
+                    guard error == nil else {
+                        print(error!.localizedDescription)
+                        return
+                    }
+                    
+                    // اگر کاربر با موفقیت اکانت ساخت:
+                    // به صفحه home وصل شه
+                    self.goToHomeScreen()
                 }
-                
-                // اگر کاربر با موفقیت اکانت ساخت:
-                // به صفحه home وصل شه
-                self.goToHomeScreen()
+            } else {
+                Auth.auth().signIn(withEmail: emailTextfield.text!, password: passwordTextfield.text!) {
+                    authResult, error in
+                    guard error == nil else {
+                        print(error!.localizedDescription)
+                        return
+                    }
+                    
+                    // اگر کاربر با موفقیت اکانت ساخت:
+                    // به صفحه home وصل شه
+                    self.goToHomeScreen()
+                }
             }
             
         }
     }
     
     @IBAction func accessoryBtnAction(_ sender: Any) {
+        self.loginStatus = (self.loginStatus == .signUp) ? .signIn : .signUp
     }
     
     // تابع رفتن به صفحه اصلی
