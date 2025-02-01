@@ -52,8 +52,13 @@ class LibraryViewController: UIViewController {
     }
     
 // Hosting Controller
+    // Swift U  I
     @IBSegueAction func createCertificatesView(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: EmptyView())
+//        return UIHostingController(coder: coder, rootView: CertificateView())
+        // تغییر رنگ پس زمینه
+        let V = UIHostingController(coder: coder, rootView: CertificateView())!
+        V.view.backgroundColor = .clear
+        return V
     }
     
 }

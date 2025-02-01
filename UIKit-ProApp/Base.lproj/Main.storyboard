@@ -967,18 +967,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="98N-LT-dBL" customClass="CustomView" customModule="UIKit_ProApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="168.33333333333331" width="353" height="515.66666666666674"/>
+                                <rect key="frame" x="20" y="168.66666666666663" width="353" height="514.99999999999989"/>
                                 <subviews>
                                     <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fm6-0j-qMY" customClass="CustomBlurView" customModule="UIKit_ProApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="353" height="515.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="515"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BUq-S0-gNw">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="515.66666666666663"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="515"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apb-ja-O6A">
-                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="70.333333333333329"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="70"/>
                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wwl-Ir-qx8">
-                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="70.333333333333329"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="353" height="70"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1g-BQ-Cl8">
@@ -1000,13 +1000,13 @@
                                                     </vibrancyEffect>
                                                 </visualEffectView>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Access 120+ hours of courses, tutorials and livestreams" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnE-1z-UFQ">
-                                                    <rect key="frame" x="16" y="90.333333333333343" width="321" height="40.666666666666657"/>
+                                                    <rect key="frame" x="16" y="90.000000000000028" width="321" height="40.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8lF-yQ-QlX" customClass="CustomView" customModule="UIKit_ProApp" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="150.99999999999997" width="321" height="52"/>
+                                                    <rect key="frame" x="16" y="150.66666666666666" width="321" height="52"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5i-tJ-l1n" customClass="CustomView" customModule="UIKit_ProApp" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="8" width="36" height="36"/>
@@ -1072,7 +1072,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIL-1X-ezD" customClass="CustomView" customModule="UIKit_ProApp" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="222.99999999999997" width="321" height="52.000000000000028"/>
+                                                    <rect key="frame" x="16" y="222.66666666666666" width="321" height="51.999999999999972"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hZS-4y-1MS" customClass="CustomView" customModule="UIKit_ProApp" customModuleProvider="target">
                                                             <rect key="frame" x="8" y="8" width="36" height="36"/>
@@ -1138,7 +1138,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjh-pK-ZZe" customClass="CustomView" customModule="UIKit_ProApp" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="295" width="321" height="52"/>
+                                                    <rect key="frame" x="16" y="294.66666666666663" width="321" height="52"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52q-xP-c1n">
                                                             <rect key="frame" x="0.0" y="0.0" width="321" height="52"/>
@@ -1183,20 +1183,20 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By clicking on Sign up, you agree to our Terms of service and Privacy policy." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpz-8d-TaP">
-                                                    <rect key="frame" x="16" y="367" width="321" height="31.333333333333314"/>
+                                                    <rect key="frame" x="16" y="366.66666666666674" width="321" height="31.333333333333314"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view alpha="0.10000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onZ-66-eLc">
-                                                    <rect key="frame" x="16" y="418.33333333333326" width="321" height="1"/>
+                                                    <rect key="frame" x="16" y="418" width="321" height="1"/>
                                                     <color key="backgroundColor" systemColor="labelColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="PgQ-j3-ddn"/>
                                                     </constraints>
                                                 </view>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJ8-Mf-WIX">
-                                                    <rect key="frame" x="16" y="439.33333333333326" width="321" height="46.333333333333314"/>
+                                                    <rect key="frame" x="16" y="439" width="321" height="46.333333333333314"/>
                                                     <color key="tintColor" systemColor="labelColor"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Already have an account?" subtitle="Sign in" titleAlignment="center">
@@ -1647,7 +1647,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Nk-A6-pa3">
-                                        <rect key="frame" x="16" y="521.66666666666663" width="361" height="240"/>
+                                        <rect key="frame" x="16" y="535.66666666666663" width="361" height="240"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="240" id="vTI-U3-VO5"/>
                                         </constraints>
@@ -1665,7 +1665,7 @@
                                     <constraint firstItem="x9J-Cl-Lpk" firstAttribute="trailing" secondItem="KYi-DE-wav" secondAttribute="trailing" constant="16" id="ItI-S5-gOB"/>
                                     <constraint firstItem="KYi-DE-wav" firstAttribute="top" secondItem="0uk-hD-vy8" secondAttribute="bottom" constant="40" id="ODp-jA-jqQ"/>
                                     <constraint firstItem="wkr-2e-qkm" firstAttribute="leading" secondItem="x9J-Cl-Lpk" secondAttribute="leading" constant="16" id="Oc8-rl-3hV"/>
-                                    <constraint firstItem="2Nk-A6-pa3" firstAttribute="top" secondItem="wkr-2e-qkm" secondAttribute="bottom" constant="16" id="TfZ-O1-59G"/>
+                                    <constraint firstItem="2Nk-A6-pa3" firstAttribute="top" secondItem="wkr-2e-qkm" secondAttribute="bottom" constant="30" id="TfZ-O1-59G"/>
                                     <constraint firstAttribute="trailing" secondItem="0uk-hD-vy8" secondAttribute="trailing" constant="16" id="VPw-23-ROD"/>
                                     <constraint firstItem="KYi-DE-wav" firstAttribute="leading" secondItem="x9J-Cl-Lpk" secondAttribute="leading" constant="16" id="WBy-CP-WFw"/>
                                     <constraint firstItem="2Nk-A6-pa3" firstAttribute="leading" secondItem="x9J-Cl-Lpk" secondAttribute="leading" constant="16" id="XeL-bt-3y2"/>
