@@ -27,6 +27,7 @@ class CoursesViewController: UIViewController {
     @IBOutlet var iconImageView: CustomImageView!
     
     @IBOutlet var menuButton: UIButton!
+    
     private var tokens: Set<AnyCancellable> = []
      
     override func viewDidLoad() {

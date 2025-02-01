@@ -9,7 +9,7 @@ import UIKit
 
 class NotificationTableViewCell: UITableViewCell {
     
-    @IBOutlet var massegeLable: UILabel!
+    @IBOutlet var massageLable: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var notificationImageView: UIImageView!
@@ -27,9 +27,9 @@ class NotificationTableViewCell: UITableViewCell {
         subtitleLabel.font = UIFont.preferredFont(for: .caption1, weight: .semibold)
         subtitleLabel.maximumContentSizeCategory = .extraLarge
                         
-        massegeLable.adjustsFontForContentSizeCategory = true
-        massegeLable.font = UIFont.preferredFont(for: .caption1  , weight: .regular)
-        massegeLable.maximumContentSizeCategory = .extraLarge
+        massageLable.adjustsFontForContentSizeCategory = true
+        massageLable.font = UIFont.preferredFont(for: .caption1  , weight: .regular)
+        massageLable.maximumContentSizeCategory = .extraLarge
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
