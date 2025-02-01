@@ -16,6 +16,9 @@ class ExploreViewController: UIViewController {
     @IBOutlet var tableViewHeight: NSLayoutConstraint!
     // اندازه جدول به اندازه محتوا
     private var tokens: Set<AnyCancellable> = []
+
+    // برای اسکرول کردن
+    private var lastScrollYPosition: CGFloat = 0
     
     @IBOutlet var papulerCollerctionView: UICollectionView!
     @IBOutlet var scrollView: UIScrollView!
@@ -45,7 +48,8 @@ class ExploreViewController: UIViewController {
                 self.tableViewHeight.constant = newContentSize.height
             }
             .store(in: &tokens)
-        
+    
+// Subscribe to scroll view changes
         scrollView.delegate = self
         
         
@@ -124,5 +128,24 @@ extension ExploreViewController: UITableViewDelegate , UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true )
     }
     
+}
+
+// برای اسکرول کردن
+extension ExploreViewController : UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+// وقتی اسکرول میکنی اون بالا تیتر به سر تیتر های خودش تغییر کنه
+        let contentHeight = scrollView.contentSize.height
+        // موقعیت اسکرول ما برای فهمیدن اینکه کجا هستیم
+        let lastScrollYPos = scrollView.contentOffset.y
+        let percentage = lastScrollYPos / contentHeight
+        // حالا اونجایی که هست این نویگیشن تیتر باشه
+        if percentage <= 0.2 {
+            self.titleLable.text = "Recent"
+        } else if percentage <= 0.6 {
+            self.titleLable.text = "Topics"
+        } else {
+            self.titleLable.text = "Popular"
+        }
+    }
 }
 

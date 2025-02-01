@@ -21,6 +21,10 @@ class FeaturedViewController: UIViewController {
     @IBOutlet var coursesTableView: UITableView!
     
     private var tokens: Set<AnyCancellable> = []
+
+// برای اسکرول کردن
+    private var lastScrollYPosition: CGFloat = 0
+
     
     // تعیین فونت و اندازه لیبل
     @IBOutlet var featuerdTitleLable: UILabel!
@@ -161,9 +165,9 @@ extension FeaturedViewController : UIScrollViewDelegate {
         let lastScrollYPos = scrollView.contentOffset.y
         let percentage = lastScrollYPos / contentHeight
         // حالا اونجایی که هست این نویگیشن تیتر باشه
-        if percentage >= 0.15 {
+        if percentage <= 0.1 {
             self.title = "Featured"
-        } else if percentage >= 0.33 {
+        } else if percentage <= 0.3 {
             self.title = "Handbooks"
         } else {
             self.title = "Courses"
