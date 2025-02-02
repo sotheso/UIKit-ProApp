@@ -1,0 +1,159 @@
+
+/* Class = "UILabel"; text = "عنوان"; ObjectID = "02R-LW-1Xk"; */
+"02R-LW-1Xk.text" = "عنوان";
+
+/* Class = "UILabel"; text = "برچسب"; ObjectID = "2re-jv-yoC"; */
+"2re-jv-yoC.text" = "برچسب";
+
+/* Class = "UILabel"; text = "برچسب"; ObjectID = "33F-Ma-cTv"; */
+"33F-Ma-cTv.text" = "برچسب";
+
+/* Class = "UILabel"; text = "عنوان"; ObjectID = "3OX-Fv-7kr"; */
+"3OX-Fv-7kr.text" = "عنوان";
+
+/* Class = "UITextField"; placeholder = "آدرس ایمیل"; ObjectID = "48d-YC-wvv"; */
+"48d-YC-wvv.placeholder" = "آدرس ایمیل";
+
+/* Class = "UIButton"; configuration.title = "ایجاد حساب"; ObjectID = "52q-xP-c1n"; */
+"52q-xP-c1n.configuration.title" = "ایجاد حساب";
+
+/* Class = "UIButton"; normalTitle = "دکمه"; ObjectID = "52q-xP-c1n"; */
+"52q-xP-c1n.normalTitle" = "دکمه";
+
+/* Class = "UILabel"; text = "عنوان بخش"; ObjectID = "7zu-55-Usu"; */
+"7zu-55-Usu.text" = "عنوان بخش";
+
+/* Class = "UITabBarItem"; title = "کتابخانه"; ObjectID = "8A5-N8-tak"; */
+"8A5-N8-tak.title" = "کتابخانه";
+
+/* Class = "UILabel"; text = "توضیحات بخش"; ObjectID = "9v2-Xd-FS7"; */
+"9v2-Xd-FS7.text" = "توضیحات بخش";
+
+/* Class = "UILabel"; text = "۲۰ بخش - ۳ ساعت"; ObjectID = "AsQ-Gk-G4T"; */
+"AsQ-Gk-G4T.text" = "۲۰ بخش - ۳ ساعت";
+
+/* Class = "UILabel"; text = "محبوب"; ObjectID = "B0e-fd-5aU"; */
+"B0e-fd-5aU.text" = "محبوب";
+
+/* Class = "UILabel"; text = "برچسب"; ObjectID = "B8x-nu-ng5"; */
+"B8x-nu-ng5.text" = "برچسب";
+
+/* Class = "UILabel"; text = "ساخت یک اپلیکیشن iOS برای iOS 15 با طرح‌بندی‌های سفارشی، انیمیشن‌ها و..."; ObjectID = "BX9-fe-g6F"; */
+"BX9-fe-g6F.text" = "ساخت یک اپلیکیشن iOS برای iOS 15 با طرح‌بندی‌های سفارشی، انیمیشن‌ها و...";
+
+/* Class = "UILabel"; text = "زیرنویس"; ObjectID = "CBA-I6-OSS"; */
+"CBA-I6-OSS.text" = "زیرنویس";
+
+/* Class = "UITabBarItem"; title = "اکنون یاد بگیرید"; ObjectID = "CVt-Do-F2R"; */
+"CVt-Do-F2R.title" = "اکنون یاد بگیرید";
+
+/* Class = "UILabel"; text = "توضیحات"; ObjectID = "EwC-ht-cmA"; */
+"EwC-ht-cmA.text" = "توضیحات";
+
+/* Class = "UILabel"; text = "عنوان دوره"; ObjectID = "Ghq-Tj-AMh"; */
+"Ghq-Tj-AMh.text" = "عنوان دوره";
+
+/* Class = "UILabel"; text = "دوره‌های اخیر"; ObjectID = "HKf-dh-nGQ"; */
+"HKf-dh-nGQ.text" = "دوره‌های اخیر";
+
+/* Class = "UILabel"; text = "برچسب"; ObjectID = "J1d-QD-pAX"; */
+"J1d-QD-pAX.text" = "برچسب";
+
+/* Class = "UILabel"; text = "نام نویسنده"; ObjectID = "J4q-w8-eho"; */
+"J4q-w8-eho.text" = "نام نویسنده";
+
+/* Class = "UILabel"; text = "عنوان دوره"; ObjectID = "Jne-C1-q11"; */
+"Jne-C1-q11.text" = "عنوان دوره";
+
+/* Class = "UILabel"; text = "عنوان"; ObjectID = "M0Y-h0-XGU"; */
+"M0Y-h0-XGU.text" = "عنوان";
+
+/* Class = "UIButton"; normalTitle = "دکمه"; ObjectID = "MB1-JX-Iog"; */
+"MB1-JX-Iog.normalTitle" = "دکمه";
+
+/* Class = "UILabel"; text = "جدیدترین"; ObjectID = "MJs-Oi-4Zu"; */
+"MJs-Oi-4Zu.text" = "جدیدترین";
+
+/* Class = "UILabel"; text = "اطلاعیه‌ها"; ObjectID = "Oua-Ep-tDS"; */
+"Oua-Ep-tDS.text" = "اطلاعیه‌ها";
+
+/* Class = "UILabel"; text = "زیرنویس"; ObjectID = "PgV-BK-eax"; */
+"PgV-BK-eax.text" = "زیرنویس";
+
+/* Class = "UILabel"; text = "ثبت نام"; ObjectID = "R1g-BQ-Cl8"; */
+"R1g-BQ-Cl8.text" = "ثبت نام";
+
+/* Class = "UITabBarItem"; title = "کاوش"; ObjectID = "RXr-8z-BVw"; */
+"RXr-8z-BVw.title" = "کاوش";
+
+/* Class = "UILabel"; text = "برچسب"; ObjectID = "RhP-nT-9tM"; */
+"RhP-nT-9tM.text" = "برچسب";
+
+/* Class = "UITextField"; placeholder = "رمز عبور"; ObjectID = "Rvu-GQ-bcN"; */
+"Rvu-GQ-bcN.placeholder" = "رمز عبور";
+
+/* Class = "UILabel"; text = "موضوعات"; ObjectID = "UBz-2F-DJu"; */
+"UBz-2F-DJu.text" = "موضوعات";
+
+/* Class = "UIButton"; configuration.subtitle = "ورود"; ObjectID = "WJ8-Mf-WIX"; */
+"WJ8-Mf-WIX.configuration.subtitle" = "ورود";
+
+/* Class = "UIButton"; configuration.title = "آیا حساب کاربری دارید؟"; ObjectID = "WJ8-Mf-WIX"; */
+"WJ8-Mf-WIX.configuration.title" = "آیا حساب کاربری دارید؟";
+
+/* Class = "UIButton"; normalTitle = "دکمه"; ObjectID = "WJ8-Mf-WIX"; */
+"WJ8-Mf-WIX.normalTitle" = "دکمه";
+
+/* Class = "UILabel"; text = "برچسب"; ObjectID = "YKa-zf-U07"; */
+"YKa-zf-U07.text" = "برچسب";
+
+/* Class = "UILabel"; text = "توضیحات بخش"; ObjectID = "aDY-5p-xw2"; */
+"aDY-5p-xw2.text" = "توضیحات بخش";
+
+/* Class = "UILabel"; text = "the handbook discription for sampel"; ObjectID = "e0l-Il-7LI"; */
+"e0l-Il-7LI.text" = "the handbook discription for sampel";
+
+/* Class = "UILabel"; text = "the handbook discription for sampel"; ObjectID = "ehW-Ie-v3a"; */
+"ehW-Ie-v3a.text" = "the handbook discription for sampel";
+
+/* Class = "UILabel"; text = "کتابخانه"; ObjectID = "feu-v7-gzr"; */
+"feu-v7-gzr.text" = "کتابخانه";
+
+/* Class = "UITabBarItem"; title = "اطلاعیه‌ها"; ObjectID = "g3i-xk-74c"; */
+"g3i-xk-74c.title" = "اطلاعیه‌ها";
+
+/* Class = "UILabel"; text = "با کلیک بر روی ثبت نام، شما با شرایط خدمات و سیاست حفظ حریم خصوصی ما موافقت می‌کنید."; ObjectID = "gpz-8d-TaP"; */
+"gpz-8d-TaP.text" = "با کلیک بر روی ثبت نام، شما با شرایط خدمات و سیاست حفظ حریم خصوصی ما موافقت می‌کنید.";
+
+/* Class = "UILabel"; text = "دسترسی به بیش از ۱۲۰ ساعت دوره‌های آموزشی، آموزش‌ها و پخش زنده"; ObjectID = "jnE-1z-UFQ"; */
+"jnE-1z-UFQ.text" = "دسترسی به بیش از ۱۲۰ ساعت دوره‌های آموزشی، آموزش‌ها و پخش زنده";
+
+/* Class = "UILabel"; text = "توضیحات"; ObjectID = "kr6-2o-zuJ"; */
+"kr6-2o-zuJ.text" = "توضیحات";
+
+/* Class = "UILabel"; text = "عنوان"; ObjectID = "lUl-7e-GBX"; */
+"lUl-7e-GBX.text" = "عنوان";
+
+/* Class = "UINavigationItem"; title = "ویژه"; ObjectID = "lv8-Qz-d0B"; */
+"lv8-Qz-d0B.title" = "ویژه";
+
+/* Class = "UIButton"; normalTitle = "دکمه"; ObjectID = "nWT-ND-aQ3"; */
+"nWT-ND-aQ3.normalTitle" = "دکمه";
+
+/* Class = "UILabel"; text = "زیرنویس"; ObjectID = "ofH-QG-7vZ"; */
+"ofH-QG-7vZ.text" = "زیرنویس";
+
+/* Class = "UILabel"; text = "برچسب"; ObjectID = "pAh-Lg-WUF"; */
+"pAh-Lg-WUF.text" = "برچسب";
+
+/* Class = "UILabel"; text = "عنوان بخش"; ObjectID = "sTo-Xa-X3M"; */
+"sTo-Xa-X3M.text" = "عنوان بخش";
+
+/* Class = "UILabel"; text = "کتاب‌های راهنمای اخیر"; ObjectID = "uu3-Hm-Akp"; */
+"uu3-Hm-Akp.text" = "کتاب‌های راهنمای اخیر";
+
+/* Class = "UILabel"; text = "SwiftUI برای iOS 15"; ObjectID = "vsR-kA-Tg6"; */
+"vsR-kA-Tg6.text" = "SwiftUI برای iOS 15";
+
+/* Class = "UILabel"; text = "گواهینامه‌ها"; ObjectID = "wkr-2e-qkm"; */
+"wkr-2e-qkm.text" = "گواهینامه‌ها";
