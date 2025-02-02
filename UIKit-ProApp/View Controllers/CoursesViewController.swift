@@ -61,19 +61,19 @@ class CoursesViewController: UIViewController {
         
 // منوی دکمه بالای صفحه
         let menu = UIMenu(
-            title: "Course Options",
+            title: NSLocalizedString("Course Options", comment: "Course Options"),
             options: .displayInline,
             children: [
-                UIAction(title: "Shere", image: UIImage(systemName: "square.and.arrow.up"), handler: { _ in
+                UIAction(title: NSLocalizedString("Shere", comment: "Shere"), image: UIImage(systemName: "square.and.arrow.up"), handler: { _ in
                     // دکمه ی شیر
                 }),
-                UIAction(title: "Take Test", image: UIImage(systemName: "highlighter"), handler: { _ in
+                UIAction(title: NSLocalizedString("Take Test", comment: "Take Test"), image: UIImage(systemName: "highlighter"), handler: { _ in
 
                 }),
-                UIAction(title: "Download", image: UIImage(systemName: "square.and.arrow.down"), handler: { _ in
+                UIAction(title: NSLocalizedString("Download", comment: "Download"), image: UIImage(systemName: "square.and.arrow.down"), handler: { _ in
 
                 }),
-                UIAction(title: "Forums", image: UIImage(systemName: "chevron.left.forwardslash.chevron.right"), handler: { _ in
+                UIAction(title: NSLocalizedString("Forums", comment: "Forums"), image: UIImage(systemName: "chevron.left.forwardslash.chevron.right"), handler: { _ in
 
                 }),
                 
@@ -101,9 +101,9 @@ extension CoursesViewController: UITableViewDelegate, UITableViewDataSource {
             let selectedSection = selectedCourse.sections![indexPath.row]
             
             cell.courseLogo.image = selectedSection.sectionIcon
-            cell.desciptionLabel.text = selectedSection.sectionDescription
-            cell.subtitleLabel.text = selectedSection.sectionSubtitle
-            cell.titleLabel.text = selectedSection.sectionTitle
+            cell.desciptionLabel.text = NSLocalizedString(selectedSection.sectionDescription, comment: selectedSection.sectionDescription)
+            cell.subtitleLabel.text = NSLocalizedString(selectedSection.sectionSubtitle, comment: selectedSection.sectionSubtitle)
+            cell.titleLabel.text = NSLocalizedString(selectedSection.sectionTitle, comment: selectedSection.sectionTitle)
         }
         return cell
     }

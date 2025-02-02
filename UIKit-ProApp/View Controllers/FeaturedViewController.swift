@@ -100,11 +100,11 @@ extension FeaturedViewController: UICollectionViewDelegate, UICollectionViewData
         let handbook = handbooks[indexPath.item]
         
         
-        cell.titleLabel.text = handbook.courseTitle
-        cell.subtitleLabel.text = handbook.courseSubtitle
-        cell.discriptionLabel.text = handbook.couresDescription
+        cell.titleLabel.text = NSLocalizedString(handbook.courseTitle, comment: handbook.courseTitle)
+        cell.subtitleLabel.text = NSLocalizedString(handbook.courseSubtitle, comment: handbook.courseSubtitle)
+        cell.discriptionLabel.text = NSLocalizedString(handbook.couresDescription, comment: handbook.couresDescription)
         cell.gradient.colors = handbook.courseGradinet
-        cell.logo.image = handbook.courseIcon
+        cell.logo.image = handbook.courseIcon 
         cell.banner.image = handbook.courseBanner
         
         return cell
@@ -166,11 +166,11 @@ extension FeaturedViewController : UIScrollViewDelegate {
         let percentage = lastScrollYPos / contentHeight
         // حالا اونجایی که هست این نویگیشن تیتر باشه
         if percentage <= 0.1 {
-            self.title = "Featured"
+            self.title = NSLocalizedString("Featured", comment: "Featured")
         } else if percentage <= 0.3 {
-            self.title = "Handbooks"
+            self.title = NSLocalizedString("Handbooks", comment: "Handbooks")
         } else {
-            self.title = "Courses"
+            self.title = NSLocalizedString("Courses", comment: "Courses")
         }
     }
     

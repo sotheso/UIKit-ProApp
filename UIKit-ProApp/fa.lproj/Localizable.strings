@@ -1,0 +1,43 @@
+/* 
+  LocalizableFA.strings
+  UIKit-ProApp
+
+  Created by Sothesom on 14/11/1403.
+  
+*/
+
+"SwiftUI Concurrency" = "SwiftUI Concurrency";
+"NEW VIDEO" = "ویدئوی جدید";
+"Build an iOS app for iOS 15 with custom layouts, animations and more!" = "یک برنامه iOS برای iOS 15 با طرح‌بندی‌های سفارشی، انیمیشن‌ها و موارد دیگر بسازید!";
+"Flutter for Designers" = "فلاتر برای طراحی";
+"20 sections - 3 hours" = "۳ ساعت و ۲۰ عنوان موضوع";
+"Build a Flutter app for iOS and Android with custom layouts, animations and more!" = "یک اپلیکیشن Flutter برای iOS و Android با طرح‌بندی‌های سفارشی، انیمیشن‌ها و امکانات بیشتر بسازید!";
+"React Hooks Advanced" = "آموزش پیشرفته ری‌اکت";
+"Build a React app with custom layouts, animations and more!" = "یک اپلیکیشن React با طرح‌بندی‌های سفارشی، انیمیشن‌ها و امکانات بیشتر بسازید!";
+"Advanced Custom Layout" = "طرح‌بندی سفارشی پیشرفته";
+"SwiftUI for iOS 15" = "SwiftUI pour iOS 15";
+"Build an iOS app for iOS 15 with custom layouts." = "یک اپلیکیشن iOS برای iOS 15 با طرح‌بندی‌های سفارشی بسازید.";
+"Coding the Home View" = "کدنویسی نمای اصلی (Home View)";
+"Learn about the formatted(date:time:) method and AsyncImage" = "درباره متد formatted(date:time:) و AsyncImage بیاموزید.";
+"Colors and Shadows" = "رنگ‌‌ها و سایه‌ها";
+"Read about the design guidelines and how you can use color to maximize your best views" = "درباره دستورالعمل‌های طراحی و نحوه استفاده از رنگ برای بهینه‌سازی بهترین نماهای خود مطالعه کنید.";
+"iOS Development" = "توسعه‌دهنده ‌ios";
+"UI Design" = "طراح یو ای";
+"Web Development" = "توسعه‌دهنده Web";
+"History" = "تاریخچه";
+"Favorites" = "موردعلاقه";
+"Downloads" = "دانلود";
+
+"Sign up" = "عضویت";
+"Sign in" = "وارد شدن";
+"Creat accout" = "ساخت حساب کاربری";
+"Don't have a account" = "حساب کاربری ندارید";
+"Already have an account?" = "ایا حساب کاربری دارید؟";
+"Missing Information" = "اطلاعات ناقص";
+"Please make sure to enter a valid email address and a paswword" = "لطفاً مطمئن شوید که یک آدرس ایمیل معتبر و یک رمز عبور وارد کرده اید";
+"OK" = "باشه";
+
+"Featured" = "ویژه";
+"Handbooks" = "راهنماها";
+"Courses" = "درس‌ها";
+

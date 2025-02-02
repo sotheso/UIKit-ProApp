@@ -30,13 +30,13 @@ class LoginViewController: UIViewController {
     }
     var loginStatus : LoginStatus = .signUp {
         didSet {
-            self.titleLabel.text = (loginStatus == .signUp) ? "Sign up" : "Sign in"
-            self.primaryBtn.setTitle((loginStatus == .signUp) ? "Creat accout" : "Sign in" , for: .normal)
-            self.accessoryBtn.setTitle((loginStatus == .signUp) ? "Don't have a account" : "Already have an account?  ", for: .normal)
+            self.titleLabel.text = (loginStatus == .signUp) ? NSLocalizedString("Sign up", comment: "Sign up") :  NSLocalizedString("Sign in", comment: "Sign in")
+            self.primaryBtn.setTitle((loginStatus == .signUp) ? NSLocalizedString("Creat accout", comment: "Creat accout") : NSLocalizedString("Sign in", comment: "Sign in") , for: .normal)
+            self.accessoryBtn.setTitle((loginStatus == .signUp) ? NSLocalizedString("Don't have a account", comment: "Don't have a account") : NSLocalizedString("Already have an account?", comment: "Already have an account?"), for: .normal)
             self.passwordTextfield.textContentType = (loginStatus == .signUp) ? .newPassword : .password
         }
     }
-    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
 // انیمیشن برنامه
@@ -70,8 +70,8 @@ class LoginViewController: UIViewController {
     @IBAction func primaryBtnAction(_ sender: Any) {
         // اگر دوتا فیلد ایمیل و پسورد خالی باشه به کاربر هشدار بده
         if (emailKHALI || passwordKHALI) {
-            let alert = UIAlertController(title: "Missing Information", message: "Please make sure to enter a valid email address and a paswword", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            let alert = UIAlertController(title: NSLocalizedString("Missing Information", comment: "Missing Information"), message: NSLocalizedString("Please make sure to enter a valid email address and a paswword", comment: "Please make sure to enter a valid email address and a paswword"), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         } else {
             // حال اگه پر بود

@@ -85,10 +85,10 @@ extension ExploreViewController: UICollectionViewDataSource , UICollectionViewDe
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionsCollectionViewCell
             let section = sections[indexPath.item]
             
-            cell.titleLabel.text = section.sectionTitle
+            cell.titleLabel.text = NSLocalizedString(section.sectionTitle, comment: section.sectionTitle )
             cell.logo.image = section.sectionIcon
             cell.banner.image = section.sectionBanner
-            cell.subtitleLabel.text = section.sectionSubtitle
+            cell.subtitleLabel.text = NSLocalizedString(section.sectionSubtitle, comment: section.sectionSubtitle )
             
             return cell
             
@@ -96,9 +96,9 @@ extension ExploreViewController: UICollectionViewDataSource , UICollectionViewDe
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CourseCell", for: indexPath) as! HandbookCollectionView
             let handbook = handbooks[indexPath.item]
             
-            cell.titleLabel.text = handbook.courseTitle
-            cell.subtitleLabel.text = handbook.courseSubtitle
-            cell.discriptionLabel.text = handbook.couresDescription
+            cell.titleLabel.text = NSLocalizedString(handbook.courseTitle, comment: handbook.courseTitle)
+            cell.subtitleLabel.text = NSLocalizedString(handbook.courseSubtitle, comment: handbook.courseSubtitle)
+            cell.discriptionLabel.text = NSLocalizedString(handbook.couresDescription, comment: handbook.couresDescription)
             cell.gradient.colors = handbook.courseGradinet
             cell.logo.image = handbook.courseIcon
             cell.banner.image = handbook.courseBanner
@@ -117,7 +117,7 @@ extension ExploreViewController: UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TopicCell", for: indexPath) as! TopicTableViewCell
         let topic = topics[indexPath.row]
         
-        cell.topicLabel.text = topic.topicName
+        cell.topicLabel.text = NSLocalizedString(topic.topicName, comment: topic.topicName)
         cell.topicIcon.image = UIImage(systemName: topic.topicSymbol)
         
         return cell
@@ -140,11 +140,11 @@ extension ExploreViewController : UIScrollViewDelegate {
         let percentage = lastScrollYPos / contentHeight
         // حالا اونجایی که هست این نویگیشن تیتر باشه
         if percentage <= 0.2 {
-            self.titleLable.text = "Recent"
+            self.titleLable.text = NSLocalizedString("Recent", comment: "Recent")
         } else if percentage <= 0.6 {
-            self.titleLable.text = "Topics"
+            self.titleLable.text = NSLocalizedString("Topics", comment: "Topics")
         } else {
-            self.titleLable.text = "Popular"
+            self.titleLable.text = NSLocalizedString("Popular", comment: "Popular")
         }
     }
 }

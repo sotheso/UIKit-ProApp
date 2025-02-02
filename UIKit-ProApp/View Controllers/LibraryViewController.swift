@@ -74,10 +74,10 @@ extension LibraryViewController: UICollectionViewDataSource , UICollectionViewDe
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SectionCell", for: indexPath) as! SectionsCollectionViewCell
         let section = sections[indexPath.item]
         
-        cell.titleLabel.text = section.sectionTitle
+        cell.titleLabel.text = NSLocalizedString(section.sectionTitle, comment: section.sectionTitle)
         cell.logo.image = section.sectionIcon
         cell.banner.image = section.sectionBanner
-        cell.subtitleLabel.text = section.sectionSubtitle
+        cell.subtitleLabel.text = NSLocalizedString(section.sectionSubtitle, comment: section.sectionSubtitle)
         
         return cell
     }
@@ -92,7 +92,7 @@ extension LibraryViewController: UITableViewDelegate , UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TopicCell", for: indexPath) as! TopicTableViewCell
         let setting = librarySettings[indexPath.row]
         
-        cell.topicLabel.text = setting.topicName
+        cell.topicLabel.text = NSLocalizedString(setting.topicName, comment: setting.topicName)
         cell.topicIcon.image = UIImage(systemName: setting.topicSymbol)
         
         return cell
